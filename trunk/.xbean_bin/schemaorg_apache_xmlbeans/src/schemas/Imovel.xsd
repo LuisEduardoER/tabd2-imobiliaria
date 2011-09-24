@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="http://uniriotec.br/TABD2/Imovel" elementFormDefault="qualified" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://uniriotec.br/TABD2/Imovel">
+
+
+    <complexType name="Imovel">
+
+    	<sequence>
+    		<element name="id" type="int" minOccurs="1" maxOccurs="1"></element>
+    		<element name="endereco" minOccurs="1" maxOccurs="1"
+    			type="string">
+    		</element>
+    		<element name="preco" type="decimal" minOccurs="1"
+    			maxOccurs="1">
+    		</element>
+    		<element name="quartos" type="int"></element>
+    		<element name="possui_vaga" minOccurs="1" maxOccurs="1">
+    			<simpleType>
+    				<restriction base="string">
+    					<enumeration value="S"></enumeration>
+    					<enumeration value="N"></enumeration>
+    				</restriction>
+    			</simpleType>
+    		</element>
+    		<element name="sol" minOccurs="1" maxOccurs="1">
+    			<simpleType>
+    				<restriction base="string">
+
+    					<length value="1"></length>
+    					<enumeration value="M"></enumeration>
+    					<enumeration value="T"></enumeration>
+    					<enumeration value="MT"></enumeration>
+    				</restriction>
+    			</simpleType>
+    		</element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="lstImovel">
+    	<sequence minOccurs="0" maxOccurs="unbounded">
+    		<element name="Imovel" type="tns:Imovel"></element>
+    	</sequence>
+    </complexType>
+    
+    
+
+    <element name="ImovelList" type="tns:lstImovel"></element>
+</schema>
