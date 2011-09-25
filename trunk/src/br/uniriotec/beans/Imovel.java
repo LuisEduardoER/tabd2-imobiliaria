@@ -37,10 +37,10 @@ public class Imovel {
 	public void setQuartos(int quartos) {
 		this.quartos = quartos;
 	}
-	public String getPossui_vaga() {
+	public String getPossuivaga() {
 		return possuiVaga;
 	}
-	public void setPossui_vaga(String possuiVaga) {
+	public void setPossuivaga(String possuiVaga) {
 		this.possuiVaga = possuiVaga;
 	}
 	public String getSol() {

@@ -13,24 +13,10 @@
     			maxOccurs="1">
     		</element>
     		<element name="quartos" type="int"></element>
-    		<element name="possui_vaga" minOccurs="1" maxOccurs="1">
-    			<simpleType>
-    				<restriction base="string">
-    					<enumeration value="S"></enumeration>
-    					<enumeration value="N"></enumeration>
-    				</restriction>
-    			</simpleType>
-    		</element>
-    		<element name="sol" minOccurs="1" maxOccurs="1">
-    			<simpleType>
-    				<restriction base="string">
+    		<element name="possuivaga" minOccurs="1" maxOccurs="1" type="string">
 
-    					<length value="1"></length>
-    					<enumeration value="M"></enumeration>
-    					<enumeration value="T"></enumeration>
-    					<enumeration value="MT"></enumeration>
-    				</restriction>
-    			</simpleType>
+    		</element>
+    		<element name="sol" minOccurs="1" maxOccurs="1" type="string">
     		</element>
     	</sequence>
     </complexType>
