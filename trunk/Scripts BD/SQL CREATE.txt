@@ -1,0 +1,16 @@
+-- Table: tb_imovel
+
+-- DROP TABLE tb_imovel;
+
+CREATE TABLE tb_imovel
+(
+  id integer NOT NULL,
+  endereco character varying(255) NOT NULL,
+  preco numeric NOT NULL,
+  quartos integer NOT NULL,
+  possui_vaga character(1),
+  sol character varying(2) NOT NULL,
+  CONSTRAINT "PK_IMOVEL" PRIMARY KEY (id)
+)
+WITH (OIDS=FALSE);
+ALTER TABLE tb_imovel OWNER TO postgres;
