@@ -1,0 +1,6 @@
+alter table tb_imovel
+add cidade varchar(50) not null default('Rio de Janeiro')
+
+
+alter table tb_imovel
+add bairro varchar(50) not null default('Urca')

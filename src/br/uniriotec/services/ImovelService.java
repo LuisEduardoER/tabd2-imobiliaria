@@ -15,16 +15,26 @@ public class ImovelService {
 	ImovelDBControl control;
 	
 	@WebMethod
-	public ImovelListDocument getImoveis(int quartos) throws Exception {
+	public ImovelListDocument getImoveis(String bairro, String cidade) throws Exception {
 		
-		String where = "";
+		StringBuffer sbWhere = new StringBuffer();
+			
+		if (bairro != null && bairro.trim().length() > 0)
+		{
+			sbWhere.append(" AND bairro ILIKE '%");
+			sbWhere.append(bairro);
+			sbWhere.append("%'");
+		}
 		
-		if (quartos > 0)
-			where += " AND quartos = " + String.valueOf(quartos);
+		if (cidade != null && cidade.trim().length() > 0)
+		{
+			sbWhere.append(" AND cidade ILIKE '%");
+			sbWhere.append(cidade);
+			sbWhere.append("%'");
+		}
 		
-		Imovel[] imoveis = control.getImoveis(where, "");
+		Imovel[] imoveis = control.getImoveis(sbWhere.toString(), "");
 		ImovelListDocument xml = parseImovel2XML(imoveis);
-		
 		
 		return xml;
 	}
