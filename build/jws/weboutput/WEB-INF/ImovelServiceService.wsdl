@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<s0:definitions name="ImovelServiceServiceDefinitions" targetNamespace="http://br/uniriotec/services" xmlns="" xmlns:s0="http://schemas.xmlsoap.org/wsdl/" xmlns:s1="http://br/uniriotec/services" xmlns:s2="http://schemas.xmlsoap.org/wsdl/soap/">
+  <s0:types>
+    <schema elementFormDefault="qualified" targetNamespace="http://uniriotec.br/TABD2/Imovel" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://uniriotec.br/TABD2/Imovel">
+      <complexType name="Imovel">
+        <sequence>
+          <element maxOccurs="1" minOccurs="1" name="id" type="int"/>
+          <element maxOccurs="1" minOccurs="1" name="endereco" type="string">
+    		</element>
+          <element maxOccurs="1" minOccurs="1" name="preco" type="decimal">
+    		</element>
+          <element name="quartos" type="int"/>
+          <element maxOccurs="1" minOccurs="1" name="possuivaga">
+            <simpleType>
+              <restriction base="string">
+                <enumeration value="S"/>
+                <enumeration value="N"/>
+              </restriction>
+            </simpleType>
+          </element>
+          <element maxOccurs="1" minOccurs="1" name="sol">
+            <simpleType>
+              <restriction base="string">
+                <enumeration value="T"/>
+                <enumeration value="M"/>
+                <enumeration value="MT"/>
+              </restriction>
+            </simpleType>
+          </element>
+        </sequence>
+      </complexType>
+      <complexType name="lstImovel">
+        <sequence maxOccurs="unbounded" minOccurs="0">
+          <element name="Imovel" type="tns:Imovel"/>
+        </sequence>
+      </complexType>
+      <element name="ImovelList" type="tns:lstImovel"/>
+    </schema>
+    <xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://br/uniriotec/services" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:import namespace="http://uniriotec.br/TABD2/Imovel"/>
+      <xs:element name="getImoveis">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="bairro" type="xs:string"/>
+            <xs:element name="cidade" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getImoveisResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="imov:ImovelList" xmlns:imov="http://uniriotec.br/TABD2/Imovel"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+  </s0:types>
+  <s0:message name="getImoveis">
+    <s0:part element="s1:getImoveis" name="parameters"/>
+  </s0:message>
+  <s0:message name="getImoveisResponse">
+    <s0:part element="s1:getImoveisResponse" name="parameters"/>
+  </s0:message>
+  <s0:portType name="ImovelService">
+    <s0:operation name="getImoveis" parameterOrder="parameters">
+      <s0:input message="s1:getImoveis"/>
+      <s0:output message="s1:getImoveisResponse"/>
+    </s0:operation>
+  </s0:portType>
+  <s0:binding name="ImovelServiceServiceSoapBinding" type="s1:ImovelService">
+    <s2:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <s0:operation name="getImoveis">
+      <s2:operation style="document"/>
+      <s0:input>
+        <s2:body parts="parameters" use="literal"/>
+      </s0:input>
+      <s0:output>
+        <s2:body parts="parameters" use="literal"/>
+      </s0:output>
+    </s0:operation>
+  </s0:binding>
+  <s0:service name="ImovelServiceService">
+    <s0:port binding="s1:ImovelServiceServiceSoapBinding" name="ImovelServiceSoapPort">
+      <s2:address location="http://localhost:7001/TABD2_IMOBILIARIA/ImovelService"/>
+    </s0:port>
+  </s0:service>
+</s0:definitions>

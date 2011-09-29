@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="http://br/uniriotec/services" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://uniriotec.br/TABD2/Imovel"/>
+  <xs:element name="getImoveis">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="bairro" type="xs:string"/>
+        <xs:element name="cidade" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getImoveisResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="imov:ImovelList" xmlns:imov="http://uniriotec.br/TABD2/Imovel"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
