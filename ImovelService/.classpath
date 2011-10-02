@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="var" path="WEBLOGIC_HOME/server/lib/weblogic.jar"/>
+	<classpathentry kind="var" path="WEBLOGIC_HOME/server/lib/webserviceclient.jar"/>
+	<classpathentry kind="var" path="ECLIPSE_HOME/plugins/org.apache.axis_1.4.0.v200706191647/lib/axis.jar"/>
+	<classpathentry kind="var" path="XMLBEANS_HOME"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

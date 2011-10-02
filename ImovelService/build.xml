@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project default="build-service">
+	<taskdef name="clientgen"
+		classname="weblogic.wsee.tools.anttasks.ClientGenTask"
+		classpath="C:/bea/wlserver_10.3/server/lib/welogic.jar"/>
+	<target name="build-service">
+		<clientgen wsdl="http://localhost:7001/TABD2_IMOBILIARIA/ImovelService?WSDL"
+			destDir="src" packageName="br.uniriotec.testeimovel.wsimovel"/>
+	</target>
+</project>
+
