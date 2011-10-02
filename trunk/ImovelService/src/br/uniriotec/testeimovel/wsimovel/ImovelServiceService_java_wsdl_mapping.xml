@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<j2ee:java-wsdl-mapping xmlns:j2ee="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <j2ee:package-mapping>
+    <j2ee:package-type>br.uniriotec.testeimovel.wsimovel</j2ee:package-type>
+    <j2ee:namespaceURI>http://br/uniriotec/services</j2ee:namespaceURI>
+  </j2ee:package-mapping>
+  <j2ee:package-mapping>
+    <j2ee:package-type>br.uniriotec.tabd2.imovel</j2ee:package-type>
+    <j2ee:namespaceURI>http://uniriotec.br/TABD2/Imovel</j2ee:namespaceURI>
+  </j2ee:package-mapping>
+  <j2ee:java-xml-type-mapping>
+    <j2ee:java-type>br.uniriotec.tabd2.imovel.LstImovel</j2ee:java-type>
+    <j2ee:root-type-qname xmlns:imov="http://uniriotec.br/TABD2/Imovel">imov:lstImovel</j2ee:root-type-qname>
+    <j2ee:qname-scope>complexType</j2ee:qname-scope>
+    <j2ee:variable-mapping>
+      <j2ee:java-variable-name>Imovel</j2ee:java-variable-name>
+      <j2ee:xml-element-name>Imovel</j2ee:xml-element-name>
+    </j2ee:variable-mapping>
+  </j2ee:java-xml-type-mapping>
+  <j2ee:java-xml-type-mapping>
+    <j2ee:java-type>br.uniriotec.tabd2.imovel.Imovel</j2ee:java-type>
+    <j2ee:root-type-qname xmlns:imov="http://uniriotec.br/TABD2/Imovel">imov:Imovel</j2ee:root-type-qname>
+    <j2ee:qname-scope>complexType</j2ee:qname-scope>
+    <j2ee:variable-mapping>
+      <j2ee:java-variable-name>Id</j2ee:java-variable-name>
+      <j2ee:xml-element-name>id</j2ee:xml-element-name>
+    </j2ee:variable-mapping>
+    <j2ee:variable-mapping>
+      <j2ee:java-variable-name>Endereco</j2ee:java-variable-name>
+      <j2ee:xml-element-name>endereco</j2ee:xml-element-name>
+    </j2ee:variable-mapping>
+    <j2ee:variable-mapping>
+      <j2ee:java-variable-name>Preco</j2ee:java-variable-name>
+      <j2ee:xml-element-name>preco</j2ee:xml-element-name>
+    </j2ee:variable-mapping>
+    <j2ee:variable-mapping>
+      <j2ee:java-variable-name>Quartos</j2ee:java-variable-name>
+      <j2ee:xml-element-name>quartos</j2ee:xml-element-name>
+    </j2ee:variable-mapping>
+    <j2ee:variable-mapping>
+      <j2ee:java-variable-name>Possui_Vaga</j2ee:java-variable-name>
+      <j2ee:xml-element-name>possui_vaga</j2ee:xml-element-name>
+    </j2ee:variable-mapping>
+    <j2ee:variable-mapping>
+      <j2ee:java-variable-name>Sol</j2ee:java-variable-name>
+      <j2ee:xml-element-name>sol</j2ee:xml-element-name>
+    </j2ee:variable-mapping>
+  </j2ee:java-xml-type-mapping>
+  <j2ee:java-xml-type-mapping>
+    <j2ee:java-type>br.uniriotec.tabd2.imovel.Possui_Vaga</j2ee:java-type>
+    <j2ee:anonymous-type-qname>http://uniriotec.br/TABD2/Imovel:&gt;Imovel&gt;possui_vaga</j2ee:anonymous-type-qname>
+    <j2ee:qname-scope>simpleType</j2ee:qname-scope>
+  </j2ee:java-xml-type-mapping>
+  <j2ee:java-xml-type-mapping>
+    <j2ee:java-type>br.uniriotec.tabd2.imovel.Sol</j2ee:java-type>
+    <j2ee:anonymous-type-qname>http://uniriotec.br/TABD2/Imovel:&gt;Imovel&gt;sol</j2ee:anonymous-type-qname>
+    <j2ee:qname-scope>simpleType</j2ee:qname-scope>
+  </j2ee:java-xml-type-mapping>
+  <j2ee:service-interface-mapping>
+    <j2ee:service-interface>br.uniriotec.testeimovel.wsimovel.ImovelServiceService</j2ee:service-interface>
+    <j2ee:wsdl-service-name xmlns:ser="http://br/uniriotec/services">ser:ImovelServiceService</j2ee:wsdl-service-name>
+    <j2ee:port-mapping>
+      <j2ee:port-name>ImovelServiceSoapPort</j2ee:port-name>
+      <j2ee:java-port-name>ImovelServiceSoapPort</j2ee:java-port-name>
+    </j2ee:port-mapping>
+  </j2ee:service-interface-mapping>
+  <j2ee:service-endpoint-interface-mapping>
+    <j2ee:service-endpoint-interface>br.uniriotec.testeimovel.wsimovel.ImovelService</j2ee:service-endpoint-interface>
+    <j2ee:wsdl-port-type xmlns:ser="http://br/uniriotec/services">ser:ImovelService</j2ee:wsdl-port-type>
+    <j2ee:wsdl-binding xmlns:ser="http://br/uniriotec/services">ser:ImovelServiceServiceSoapBinding</j2ee:wsdl-binding>
+    <j2ee:service-endpoint-method-mapping>
+      <j2ee:java-method-name>getImoveis</j2ee:java-method-name>
+      <j2ee:wsdl-operation>getImoveis</j2ee:wsdl-operation>
+      <j2ee:wrapped-element></j2ee:wrapped-element>
+      <j2ee:method-param-parts-mapping>
+        <j2ee:param-position>0</j2ee:param-position>
+        <j2ee:param-type>java.lang.String</j2ee:param-type>
+        <j2ee:wsdl-message-mapping>
+          <j2ee:wsdl-message xmlns:ser="http://br/uniriotec/services">ser:getImoveis</j2ee:wsdl-message>
+          <j2ee:wsdl-message-part-name>bairro</j2ee:wsdl-message-part-name>
+          <j2ee:parameter-mode>IN</j2ee:parameter-mode>
+        </j2ee:wsdl-message-mapping>
+      </j2ee:method-param-parts-mapping>
+      <j2ee:method-param-parts-mapping>
+        <j2ee:param-position>1</j2ee:param-position>
+        <j2ee:param-type>java.lang.String</j2ee:param-type>
+        <j2ee:wsdl-message-mapping>
+          <j2ee:wsdl-message xmlns:ser="http://br/uniriotec/services">ser:getImoveis</j2ee:wsdl-message>
+          <j2ee:wsdl-message-part-name>cidade</j2ee:wsdl-message-part-name>
+          <j2ee:parameter-mode>IN</j2ee:parameter-mode>
+        </j2ee:wsdl-message-mapping>
+      </j2ee:method-param-parts-mapping>
+      <j2ee:wsdl-return-value-mapping>
+        <j2ee:method-return-value>br.uniriotec.tabd2.imovel.LstImovel</j2ee:method-return-value>
+        <j2ee:wsdl-message xmlns:ser="http://br/uniriotec/services">ser:getImoveisResponse</j2ee:wsdl-message>
+        <j2ee:wsdl-message-part-name>ImovelList</j2ee:wsdl-message-part-name>
+      </j2ee:wsdl-return-value-mapping>
+    </j2ee:service-endpoint-method-mapping>
+  </j2ee:service-endpoint-interface-mapping>
+</j2ee:java-wsdl-mapping>
