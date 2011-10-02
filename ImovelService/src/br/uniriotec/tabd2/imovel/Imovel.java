@@ -45,23 +45,23 @@ public class Imovel implements java.io.Serializable {
     this.quartos = quartos;
   }
 
-  private br.uniriotec.tabd2.imovel.Possui_Vaga possui_Vaga;
+  private java.lang.String possuivaga;
 
-  public br.uniriotec.tabd2.imovel.Possui_Vaga getPossui_Vaga() {
-    return this.possui_Vaga;
+  public java.lang.String getPossuivaga() {
+    return this.possuivaga;
   }
 
-  public void setPossui_Vaga(br.uniriotec.tabd2.imovel.Possui_Vaga possui_Vaga) {
-    this.possui_Vaga = possui_Vaga;
+  public void setPossuivaga(java.lang.String possuivaga) {
+    this.possuivaga = possuivaga;
   }
 
-  private br.uniriotec.tabd2.imovel.Sol sol;
+  private java.lang.String sol;
 
-  public br.uniriotec.tabd2.imovel.Sol getSol() {
+  public java.lang.String getSol() {
     return this.sol;
   }
 
-  public void setSol(br.uniriotec.tabd2.imovel.Sol sol) {
+  public void setSol(java.lang.String sol) {
     this.sol = sol;
   }
 
