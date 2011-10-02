@@ -38,23 +38,13 @@
       <j2ee:xml-element-name>quartos</j2ee:xml-element-name>
     </j2ee:variable-mapping>
     <j2ee:variable-mapping>
-      <j2ee:java-variable-name>Possui_Vaga</j2ee:java-variable-name>
-      <j2ee:xml-element-name>possui_vaga</j2ee:xml-element-name>
+      <j2ee:java-variable-name>Possuivaga</j2ee:java-variable-name>
+      <j2ee:xml-element-name>possuivaga</j2ee:xml-element-name>
     </j2ee:variable-mapping>
     <j2ee:variable-mapping>
       <j2ee:java-variable-name>Sol</j2ee:java-variable-name>
       <j2ee:xml-element-name>sol</j2ee:xml-element-name>
     </j2ee:variable-mapping>
-  </j2ee:java-xml-type-mapping>
-  <j2ee:java-xml-type-mapping>
-    <j2ee:java-type>br.uniriotec.tabd2.imovel.Possui_Vaga</j2ee:java-type>
-    <j2ee:anonymous-type-qname>http://uniriotec.br/TABD2/Imovel:&gt;Imovel&gt;possui_vaga</j2ee:anonymous-type-qname>
-    <j2ee:qname-scope>simpleType</j2ee:qname-scope>
-  </j2ee:java-xml-type-mapping>
-  <j2ee:java-xml-type-mapping>
-    <j2ee:java-type>br.uniriotec.tabd2.imovel.Sol</j2ee:java-type>
-    <j2ee:anonymous-type-qname>http://uniriotec.br/TABD2/Imovel:&gt;Imovel&gt;sol</j2ee:anonymous-type-qname>
-    <j2ee:qname-scope>simpleType</j2ee:qname-scope>
   </j2ee:java-xml-type-mapping>
   <j2ee:service-interface-mapping>
     <j2ee:service-interface>br.uniriotec.testeimovel.wsimovel.ImovelServiceService</j2ee:service-interface>

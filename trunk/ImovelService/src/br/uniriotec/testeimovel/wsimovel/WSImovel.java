@@ -20,17 +20,17 @@ public class WSImovel {
 		try{
 			locator= new ImovelServiceService_Impl (wsdlurl);
 			webservice = locator.getImovelServiceSoapPort();
-			System.out.println("****************************");
+			System.out.println("*************RESULTADO DA CONSULTA*******************");
 			LstImovel lstImovel = webservice.getImoveis("botafogo", "rio de janeiro");
 			
 			for(int i=0; i< lstImovel.getImovel().length; i++){
 				
 				Imovel imovel = lstImovel.getImovel()[i];
-				System.out.println(imovel.getEndereco());
-				System.out.println(imovel.getPreco());
-				System.out.println(imovel.getQuartos());
-				System.out.println(imovel.getPossui_Vaga());
-				System.out.println(imovel.getSol());
+				System.out.println("Endereco:" + imovel.getEndereco());
+				System.out.println("Preco:" + imovel.getPreco());
+				System.out.println("Quant Quartos:" + imovel.getQuartos());
+				System.out.println("Possui vaga na garagem:" + imovel.getPossuivaga());
+				System.out.println("Horário Sol:" + imovel.getSol());
 				
 			}
 			
